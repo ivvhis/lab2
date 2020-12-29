@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class AirportJoinMapper extends Mapper<LongWritable, Text, KeyValueWritableComparable , Text> {
     private static final int AIRACE_ID_NUMBER = 0;
-    protected void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] airraces = line.split(",");
         if (key.get() > 0) {

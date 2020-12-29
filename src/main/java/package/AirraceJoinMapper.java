@@ -12,7 +12,7 @@ public class AirraceJoinMapper extends Mapper<LongWritable, Text, KeyValueWritab
     public static final String DELIMETER = ",";
 
     @Override
-    protected void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] oneRaceInfo = line.split(DELIMETER);
 //        String isDelay = oneRaceInfo[17];
